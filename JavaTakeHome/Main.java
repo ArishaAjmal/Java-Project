@@ -2,7 +2,7 @@ package JavaTakeHome;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import JavaTakeHome.Courses;
+//import JavaTakeHome.Courses;
 
 /**
  * Created by Simay on 13.4.2019.
@@ -12,6 +12,7 @@ public class Main {
 
     public static void main(String ...args){
         Students student;
+        Scanner sc = new Scanner(System.in);
 
         ArrayList<Courses> coursesArrayList=new ArrayList<>();
 
@@ -36,21 +37,33 @@ public class Main {
         System.out.println("Enter course code:");
         printCourses(coursesArrayList);
         int cCode = scanner.nextInt();
+        
         Courses desiredCourse = findCourse(cCode, coursesArrayList);
+        String name, sname;
+        int id; float cgpa;
+
+        System.out.println("Enter Name : ");
+        name = sc.nextLine();
+        System.out.println("Enter Surname : ");
+        sname = sc.nextLine();
+        System.out.println("Enter id : ");
+        id = sc.nextInt();
+        System.out.println("Enter CGPA : ");
+        cgpa = sc.nextFloat();
         if (desiredCourse == null)
             System.out.println("There is no such a course...");
         else {
                 if (cCode/100==5){
-                   student=new GraduateStudents(" Ali"," Kaya",123,1.89);
-                    addStudentToCourse(student, desiredCourse);
+                     addStudentToCourse(student, desiredCourse);
+                     student=new GraduateStudents(name, sname, id, cgpa);                    
 
                 }
                 else if (cCode/100==7){
-                    student= new SpecialStudents(" Ayşe"," Demir",354,3.80);
+                    student= new SpecialStudents(name, sname, id, cgpa);
                     addStudentToCourse(student,desiredCourse);
                 }
                 else if (cCode/100 <=4 && cCode/100 >=1){
-                    student= new RegularStudents(" Ahmet"," Yılmaz",124,2.82);
+                    student= new RegularStudents(name, sname, id, cgpa);
                     addStudentToCourse(student,desiredCourse);
                 }
             System.out.println(desiredCourse.getCourseName());

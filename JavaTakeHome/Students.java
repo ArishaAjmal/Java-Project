@@ -6,9 +6,9 @@ package JavaTakeHome;
  * Created by Simay on 13.4.2019.
  */
 public class Students {
-    private String name, sname;
-    private int id;
-    private double cgpa;
+    public String name, sname;
+    public int id;
+    public double cgpa;
 
     public void setName(String name) {
         this.name = name;
