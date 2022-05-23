@@ -1,3 +1,11 @@
-# Student-registration-system-Java-program
-A complete  Java program that utilizes  inheritance  and polymorphism.  In the 
-program you are expected to  write a simple Student registration  system  application.
+# Course Registration System
+
+### Running the program
+1. Compile
+```
+    javac Main.java
+```
+2. Run
+```
+    java Main
+```
