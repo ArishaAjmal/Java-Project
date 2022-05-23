@@ -43,7 +43,7 @@ public class Main {
 
     } else if (ans == 2) {
         System.out.println("\033[H\033[2J");
-        System.out.print("Enter course code (Numeric): ");
+        System.out.print("Enter course code :\n [< 250 => Graduate]\n [< 150 => Special]\n [>= 150 => Regular]\n CODE : ");
         int cCode = Integer.parseInt(scanner.nextLine());
         String name, sname;
         int id; float cgpa;
@@ -67,16 +67,16 @@ public class Main {
                 System.out.println("Press enter to continue....");
                 scanner.nextLine();
 
-                if (cCode/100==5){
+                if (cCode > 250){
                    student = new GraduateStudents(name, sname, id, cgpa);
                     addStudentToCourse(student, desiredCourse);
 
                 }
-                else if (cCode/100==7){
+                else if (cCode > 150){
                     student = new SpecialStudents(name, sname, id, cgpa);
                     addStudentToCourse(student, desiredCourse);
                 }
-                else if (cCode/100 <=4 && cCode/100 >=1){
+                else {
                     student = new RegularStudents(name, sname, id, cgpa);
                     addStudentToCourse(student, desiredCourse);
                 }
@@ -112,7 +112,7 @@ public class Main {
         if (coursesArrayList.size() < 10) {
             System.out.println("\033[H\033[2J");
             System.out.println("Enter following details of the Course : ");
-            System.out.print("Course code (Numeric): ");
+            System.out.print("Enter course code :\n [< 250 => Graduate]\n [< 150 => Special]\n [>= 150 => Regular]\n CODE : ");
             int courseCode = Integer.parseInt(scanner.nextLine());
             
             System.out.print("Course name: ");
