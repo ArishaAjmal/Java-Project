@@ -72,7 +72,7 @@ public class Courses {
 
     public void printCourseInfo(){
 
-        System.out.println("Course Name:"+courseName+"Course Code:"+courseCode+"Course Semester:"+semester);
+        System.out.println("Course Name: " + courseName + "\nCourse Code: " + courseCode + "\nCourse Semester: " + semester);
     }
 
 

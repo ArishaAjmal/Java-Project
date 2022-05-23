@@ -13,7 +13,7 @@ public class RegularStudents extends Students {
     }
     @Override
     public void display() {
-        System.out.println("Regular student:");
+        System.out.println("\nType : Regular Student");
         super.display();
     }
 }

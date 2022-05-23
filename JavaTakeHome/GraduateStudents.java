@@ -24,7 +24,7 @@ public class GraduateStudents extends Students {
 
     @Override
     public void display() {
-        System.out.println("Graduate Student:");
+        System.out.println("\nType : Graduate Student");
         super.display();
     }
 }
